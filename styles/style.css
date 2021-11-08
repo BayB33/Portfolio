@@ -21,7 +21,7 @@ h2 {
 /* Header */
 
 header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     display: flex;
     height: 4rem;
@@ -41,6 +41,14 @@ h1 {
     top: 0;
 }
 
+h1 a {
+    color: orangered;
+}
+
+h1 a:hover {
+    color: orangered;
+}
+
 nav ul {
     display: flex;
     width: 50%;
@@ -55,13 +63,16 @@ li {
 }
 
 nav ul li a {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: .5rem;
+    border: 3px solid rgba(255, 81, 0, 0.6);
+    border-radius: 30px;
+    padding: .5rem 1rem;
+    box-shadow: 0 0 .1rem rgb(255, 81, 0);
+    font-family: 'Telma', cursive;
+    font-weight: 900;
 }
 
 nav ul a:hover {
-    background-color: black;
+    background-color: rgba(255, 98, 41, 0.993);
     color: rgb(255, 255, 255);
 }
 
@@ -93,7 +104,7 @@ main {
     /*First Section - About Me*/
 .about_me {   
     width: 100%;
-    height: 42rem;
+    height: 100vh;
 }
 
 .div_one {
@@ -108,12 +119,14 @@ main {
     bottom: 0;
     top: 0;
     width: 48%;
-    height: fit-content;
+    height: 100%;
 }
 
 .div_one aside img {
     width: 100%;
     height: 100%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 .div_one aside p {
@@ -133,33 +146,70 @@ main {
     height: 100%;
 }
 
+.div_one article .paragraph, .div_one article .card_container {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: rgb(255, 254, 251);
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
             /*Left Side's Paragraph*/
 .div_one article .paragraph {
     text-align: center;
-    height: 40%;
-    width: 100%;
+    height: 44%;
+    width: 90%;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
 }            
             /*Left Side's Card*/
+                /*colors and space*/
+.pastel {
+    color: rgb(124, 124, 253);
+}
+
+.blue {
+    color: rgb(53, 225, 255);
+}
+
+.orange {
+    color: rgb(196, 127, 0);
+}
+
+.indentation {
+    margin-left: 1rem;
+}
+
+.space {
+    margin-left: 0.5rem;
+}
 .div_one article .card_container {
-    height: 60%;
+    height: 54%;
+    width: 100%;
     position: absolute;
+    margin-top: 1%;
 }
 
 .div_one article .card {
     height: 12rem;
-    width: 25rem;
+    width: 90%;
     position: relative;
     perspective: 150rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .div_one article .card_side {
     color: white;
-    background-color: #1f1f1f;
+    background-color: #2c1d1d;
     position: absolute;
     border-radius: 15px;
     overflow: hidden;
     backface-visibility: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
     margin: auto;
@@ -187,9 +237,34 @@ main {
     transform: translate(-50%, -50%);
 }
 
+.card_front {
+    font-size: 1.5rem;
+}
+
 .card_back {
     left: 55%;
     font-size: .7rem;
-    line-height: 1rem;
+    line-height: 1.3rem;
     width: 90%;
+}
+
+/*Footer*/ 
+footer {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+
+/*------- Contact Page --------*/
+.contact {
+    position: relative;
+    top: 4rem;
+    text-align: center;
 }
