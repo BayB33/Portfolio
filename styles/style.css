@@ -1,7 +1,7 @@
 /* General Rules */
 html {
     margin: 0 auto;
-    text-align: center;
+    padding: 0;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255, 255, 255);
@@ -15,6 +15,7 @@ body {
 h2 {
     font-weight: 200;
     font-size: 2rem;
+    text-align: center;
 }
 
 /* Header */
@@ -27,6 +28,7 @@ header {
     width: 80%;
     background-color: white; 
     top: 0;
+    z-index: 5;
 }
 
 h1 {
@@ -80,11 +82,114 @@ a:hover {
 }
 
 /* Main Section */
-
 main {
     width: 100%;
 }
 
-picture img {
+.bandeau img {
     width: 100%;
+}
+
+    /*First Section - About Me*/
+.about_me {   
+    width: 100%;
+    height: 42rem;
+}
+
+.div_one {
+    position: relative;
+    height: 90%;
+}
+
+        /*Right Side*/
+.div_one aside {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 48%;
+    height: fit-content;
+}
+
+.div_one aside img {
+    width: 100%;
+    height: 100%;
+}
+
+.div_one aside p {
+    position: absolute;
+    font-size: .6rem;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+        /*Left Side*/
+.div_one article {
+    position: absolute;
+    left: 0;
+    width: 48%;
+    height: 100%;
+}
+
+            /*Left Side's Paragraph*/
+.div_one article .paragraph {
+    text-align: center;
+    height: 40%;
+    width: 100%;
+}            
+            /*Left Side's Card*/
+.div_one article .card_container {
+    height: 60%;
+    position: absolute;
+}
+
+.div_one article .card {
+    height: 12rem;
+    width: 25rem;
+    position: relative;
+    perspective: 150rem;
+}
+
+.div_one article .card_side {
+    color: white;
+    background-color: #1f1f1f;
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: all 0.8s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.div_one article .card_backside {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card_frontside {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card_backside {
+    transform: rotateY(0deg);
+}
+
+.card_front, .card_back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card_back {
+    left: 55%;
+    font-size: .7rem;
+    line-height: 1rem;
+    width: 90%;
 }
