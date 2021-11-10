@@ -268,3 +268,56 @@ footer {
     top: 4rem;
     text-align: center;
 }
+
+.form_container {
+    width: 80%;
+    height: 30rem;
+    margin: auto;
+    background: linear-gradient(to bottom right, rgba(200, 200, 200, 0.4), rgba(255, 255, 255, 0.4));
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+form {
+    width: 40%;
+}
+
+.form_title {
+    position: absolute;
+    top: 20px;
+}
+
+.input_block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .3rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.submit_button input {
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(153, 0, 0);
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.submit_button input:hover {
+    background-color: whitesmoke;
+    color: rgb(153, 0, 0);
+}
+
+
+
