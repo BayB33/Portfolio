@@ -192,6 +192,25 @@ main {
     margin-top: 1%;
 }
 
+.anim_phrase {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.anim_button {
+    position: absolute;
+}
+
+#message1 {
+    display: block;
+    font-size: .9rem;
+}
+
+#message2 {
+    display: none;
+}
+
 .div_one article .card {
     height: 12rem;
     width: 90%;
