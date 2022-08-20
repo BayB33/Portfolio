@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
-    
     <link href="https://api.fontshare.com/css?f[]=tanker@400&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/css?f[]=telma@300&display=swap" rel="stylesheet">
     <title>Tom's Portfolio</title>
 
-    <script src="./javascript/script.js"></script>
-    <script src="https://kit.fontawesome.com/901c7579d3.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
-    <header>
+    <header class="d-flex justify-content-between w-100">
         <h1><a href="index.html">Tom's Portfolio</a></h1>
         <nav>
             <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
         <div class="social-media_menu">
             <ul>
-                <li><a href="https://www.linkedin.com/in/thomasraymond2602/"> <i class="fa-brands fa-linkedin fa-2xl"></i> </a></li>
-                <li><a href="https://github.com/BayB33"> <i class="fa-brands fa-github-square fa-2xl"></i> </a></li>
-                <li><a href="https://www.codewars.com/users/BayB33"> <i class="fa-solid fa-code fa-xl"></i> </a></li>
+                <li><a class="social_media_links" href="https://www.linkedin.com/in/thomasraymond2602/"> <i class="fa-brands fa-linkedin fa-xl"></i> </a></li>
+                <li><a class="social_media_links" href="https://github.com/BayB33"> <i class="fa-brands fa-github-square fa-xl"></i> </a></li>
+                <li><a class="social_media_links" href="https://www.codewars.com/users/BayB33"> <i class="fa-solid fa-file-code fa-lg"></i> </a></li>
+                <li id="email_me"><a class="social_media_links"  href="contact.html"><i class="fa-solid fa-envelope fa-2xl fa-shake"></i></a></li>
             </ul>
         </div>     
     </header>
@@ -37,7 +37,7 @@
             <img src="img/dev_setup.jpg" alt="Hands typing on a computer">
         </picture>
         <section class="about_me">
-            <h2>About Me</h2>
+            <h2 class="text-center">About Me</h2>
             <div class="section_div div_one">
                 <article>
                     <div class="paragraph">
@@ -66,7 +66,7 @@
                                             <br>
                                             <span class="blue indentation">position</span><span class="space">:</span><span class="orange space">'Still learning and looking for my first position'</span>,
                                             <br>
-                                            <span class="blue indentation">someKnowledge</span><span class="space">:</span> <span class="space">[</span><span class="orange">HTML5, CSS3, JavaScript, React, PHP, MySQL</span>]
+                                            <span class="blue indentation">basics</span><span class="space">:</span> <span class="space">[</span><span class="orange">HTML5, CSS3, JavaScript, Python, Flask, SQlite3</span>]
                                             <br>
                                         };
                                     </p>
@@ -102,5 +102,8 @@
     <footer>
         <p>Tom's Portfolio &copy; 2021</p>
     </footer>
+
+    <script src="./javascript/script.js"></script>
+    <script src="https://kit.fontawesome.com/901c7579d3.js" crossorigin="anonymous"></script>
 </body>
 </html>

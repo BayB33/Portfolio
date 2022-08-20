@@ -1,0 +1,346 @@
+/* Set Variables */
+$base-color: rgba(26, 24, 24, 0.993);
+$secondary: #008286;
+$border: rgba(37, 35, 35, 0.4);
+$shadow: rgb(110, 97, 91);
+$background : rgb(255, 252, 224);
+
+
+/* General Rules */
+html {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 22px;
+    font-family: 'Tanker', Arial, Helvetica, sans-serif;
+    background-color: $background;
+    
+}
+
+body {
+    background-color: $background;
+}
+
+h2 {
+    width: 50%;
+    margin: 5rem 0 5rem 25%;
+    font-weight: 200;
+    font-size: 3rem;
+    color: $secondary;
+    border-bottom: 3px solid $secondary;
+}
+
+/* Header */
+
+header {
+    height: 4rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-stretch: extra-expanded;
+    font-weight: 400;
+}
+
+h1 a {
+    color: $base-color;
+}
+
+nav ul, .social-media_menu ul {
+    display: flex;
+    justify-content:space-around;
+}
+
+header ul li {
+    margin: .4rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    border: 1px solid $border;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    box-shadow: 0 0 .5rem $shadow;
+    font-family: 'Telma', cursive;
+    font-weight: 900;
+    background-color: $base-color;
+    margin-right: 1.3rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media_menu a {
+    color: $base-color;
+    margin-right: .8rem;
+}
+
+#email_me a {
+    color: rgb(0, 187, 72);
+}
+
+#email_me a:hover {
+    color: rgb(0, 81, 187);
+}
+
+/* Main Section */
+main {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10rem;
+}
+
+.bandeau img {
+    width: 100%;
+    box-shadow: 0 0 .5rem $shadow;
+}
+
+    /*First Section - About Me*/
+.about_me {   
+    width: 100%;
+    height: 100vh;
+}
+
+.div_one {
+    position: relative;
+    height: 90%;
+}
+
+        /*Right Side*/
+.div_one aside {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 48%;
+    height: 100%;
+}
+
+.div_one aside img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1rem 2rem $shadow;
+    border-radius: 5px;
+}
+
+.div_one aside p {
+    position: absolute;
+    font-size: .6rem;
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+        /*Left Side*/
+.div_one article {
+    position: absolute;
+    left: 0;
+    width: 48%;
+    height: 100%;
+}
+
+.div_one article .paragraph, .div_one article .card_container {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: rgb(255, 254, 251);
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem $shadow;
+}
+
+            /*Left Side's Paragraph*/
+.div_one article .paragraph {
+    text-align: center;
+    height: 44%;
+    width: 90%;
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+}            
+            /*Left Side's Card*/
+                /*colors and space*/
+.pastel {
+    color: rgb(124, 124, 253);
+}
+
+.blue {
+    color: rgb(53, 225, 255);
+}
+
+.orange {
+    color: rgb(196, 127, 0);
+}
+
+.indentation {
+    margin-left: 1rem;
+}
+
+.space {
+    margin-left: 0.5rem;
+}
+.div_one article .card_container {
+    height: 54%;
+    width: 100%;
+    position: absolute;
+    margin-top: 1%;
+}
+
+.anim_phrase {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#message1 {
+    display: block;
+    font-size: .9rem;
+}
+
+#message2 {
+    display: none;
+}
+
+.div_one article .card {
+    height: 12rem;
+    width: 90%;
+    position: relative;
+    perspective: 150rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div_one article .card_side {
+    color: white;
+    background-color: #2c1d1d;
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: all 0.8s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.div_one article .card_backside {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card_frontside {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card_backside {
+    transform: rotateY(0deg);
+}
+
+.card_front, .card_back {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card_front {
+    font-size: 1.5rem;
+}
+
+.card_back {
+    left: 55%;
+    font-size: .7rem;
+    line-height: 1.3rem;
+    width: 90%;
+}
+
+/*Footer*/ 
+footer {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    border-radius: 5px;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+
+/*------- Contact Page --------*/
+
+
+.contact {
+    margin-top: 5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: rgb(66, 66, 66);
+}
+
+.form_container {
+    width: 60%;
+    height: 40rem;
+    margin: auto;
+    background: linear-gradient(to bottom right, rgba(200, 200, 200, 0.4), rgba(255, 255, 255, 0.4));
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+form {
+    width: 50%;
+}
+
+.form_title {
+    margin-bottom: 2rem;
+    color: #008286;
+    font-size: 1.7rem;
+    border-bottom: 5px dotted #008286;
+}
+
+.input_block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+input, textarea {
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: .3rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.submit_button input {
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(0, 187, 72);
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.submit_button input:hover {
+    background-color: rgb(0, 206, 0);
+    color: rgb(255, 255, 255);
+}
+
+
+
